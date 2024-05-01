@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
+    text-lg shadow-md text-cyan-50">
+        <div class="lg:w-[20%] md:w-[35%] sm:w-[40%] flex">
+            <div class="w-[50px] h-[50px] flex items-center mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>          
+            </div>
+            <div class="flex flex-wrap items-center w-[80%] justify-around">
+                <img src="img/logo.jpg" alt="" class="w-[50px] h-[50px] rounded-full">
+                <h1>Salud en armonia</h1>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap lg:w-[15%] md:w-[30%] justify-around">
+            <button class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+              </button>
+        </div>        
+    </nav>
+
+    <div class="bg-cyan-50">
+        <ul id="menu" class="lg:flex lg:items-center lg:space-x-4">
+            <li><a href="#" class="text-white hover:text-gray-300">Inicio</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Acerca de</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Servicios</a></li>
+            <li><a href="#" class="text-white hover:text-gray-300">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Deslizador -->
+    <div class="mx-auto max-w-full bg-[url(https://lh3.googleusercontent.com/-lkIlNSPqRCU/X4NUZlMliAI/AAAAAAAABhY/jMmZ4Eauef80fJTn38L-bIXYFldY7AMkACLcBGAsYHQ/w1200-h630-p-k-no-nu/image.png)] 
+    lg:h-[700px] bg-contain bg-center md:h-[340px]">
+    </div>
+    
+
+    <!-- contenedor de las frases -->
+    <div class="mx-auto lg:w-[1300px] md:w-[700px] sm:w-[500px] lg:mt-16 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg">
+
+        <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#e0ebed] m-3">
+            <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
+                <img src="img/JhonFKennedy.jpeg" alt="foto de Jhon F Kennedy" class="w-[100%]">
+            </div>
+ 
+            <div class="w-[70%]">
+                La actividad física no es solo una de las claves más importantes para un cuerpo saludable, 
+                es la base de una actividad dinámica y creativa. (John F Kennedy)
+            </div>          
+        </div>
+
+        <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#e0ebed] m-3">
+            <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
+                <img src="img/c-s-lewis.webp" alt="foto de C. S. Lewis">
+            </div>
+            
+            <div class="w-[70%]">
+                El dolor mental es menos dramático que el dolor físico, pero es más común 
+                y también más difícil de soportar. (C. S. Lewis)
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- pie de pagina -->
+    <footer class="mx-auto flex justify-center p-8 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] w-full h-[350px] font-semibold text-cyan-50">
+        <div class="w-[40%] p-3 flex items-center justify-center">
+            <h1 class="text-xl">Contáctanos</h1>
+            <img src="img/iconos/facebook.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
+            <img src="img/iconos/instagram.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
+            <img src="img/iconos/twitter.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
+        </div>
+        <div class="w-[40%] p-3 flex items-center justify-center">
+            <h1 class="text-xl">Comparte</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[30px] h-[30px] m-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+              </svg>
+        </div>
+    </footer>
+</body>
+</html>
