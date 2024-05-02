@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="ScriptCalculadora.js"></script>
+</head>
+<body>
+    <!-- Barra nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
+    text-lg shadow-md text-cyan-50">
+        <div class="lg:w-[20%] md:w-[35%] sm:w-[40%] flex">
+            <div class="w-[50px] h-[50px] flex items-center mx-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>          
+            </div>
+            <div class="flex flex-wrap items-center w-[80%] justify-around">
+                <img src="img/logo.jpg" alt="" class="w-[50px] h-[50px] rounded-full">
+                <h1>Salud en armonia</h1>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap lg:w-[15%] md:w-[30%] justify-around">
+            <a class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full" href="Home.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+            </a>
+
+            <button class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            </button>
+        </div>          
+    </nav>
+
+    <div class="mx-auto  p-6 lg:w-[1300px] md:w-[700px] sm:w-[500px] mb-9 flex flex-wrap h-300px rounded-lg 
+    drop-shadow-lg mt-[100px]">
+        <div class="w-[100%] p-2 flex flex-wrap">
+            <h1 class="text-3xl font-semibold text-center w-[100%] mb-4">CALCULADORAS</h1>
+
+            <div class="w-[50%] p-3">
+                <h2 class="text-2xl text-center font-bold md:text-xl">Indice de masa corporal</h2>
+                <p class="mt-5 text-xl">
+                    El índice de masa corporal (IMC) es una medida que se utiliza para evaluar si una persona tiene un peso saludable en relación con su altura. Para calcularlo, sigue estos pasos:
+
+                    Divide tu peso (en kilogramos) entre tu altura (en metros).
+                    Divide el resultado nuevamente entre tu altura para obtener tu IMC.
+    
+                    La fórmula del IMC se expresa como:
+                    IMC=altura2peso​
+                </p>
+                <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] mt-2 p-3">
+                    <div class="w-[100%]">
+                        <label for="" class="font-semibold">ESTATURA</label>
+                        <input id="Estatura" type="number" class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400" placeholder="Estatura en metros">
+                    </div>
+                    
+                    <div class="w-[100%] mt-2">
+                        <label for="" class="font-semibold">PESO</label>
+                        <input id="Peso" type="number" class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400" placeholder="Peso en kg">
+                    </div>
+                    <button onclick="CalcularIMC()" class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                    <p id="resultado" class="w-[100%] mt-3 text-xl font-medium">Su valor de IMC es: </p>
+                    <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es: </p>
+                </div>
+            </div>
+
+            <div class="w-[50%] p-3">
+                <h2 class="text-2xl text-center font-bold md:text-xl">Porcentaje de grasa corporal</h2>
+                <p class="mt-5 text-xl">
+                    Fórmula de Deurenberg:
+                    La fórmula de Deurenberg es más sencilla y se basa en el IMC, la edad, el sexo y otros factores. Para calcular el porcentaje de grasa corporal utilizando esta fórmula, sigue estos pasos:
+                </p>
+                <h3 class="text-2xl font-semibold mt-3">Para hombres:</h3>
+                <p class="mt-5 text-xl">
+                    
+                    Porcentaje de grasa corporal=(1.20×IMC)+(0.23×Edad)−(10.8×Genero)−5.4
+                </p>
+                <h3 class="text-2xl font-semibold mt-3">Para mujeres</h3>
+                <p class="mt-5 text-xl">
+                    Para mujeres:
+                    Porcentaje de grasa corporal=(1.20×IMC)+(0.23×Edad)−5.4
+                </p>
+
+                <p class="mt-5 text-xl">
+                    Donde:
+    
+                    IMC es el Índice de Masa Corporal calculado previamente.
+                    Edad es la edad en años.
+                    Género: Hombre = 1, Mujer = 2
+                </p>  
+            </div>
+
+            
+         
+                 
+        </div>
+    </div>
+</body>
+</html>
