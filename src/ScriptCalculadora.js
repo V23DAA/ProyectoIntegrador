@@ -37,4 +37,39 @@ function CalcularIMC() {
 
     var resultadoTexto = clasificacion; // Redondeamos a dos decimales
     document.getElementById("clasificacion").innerText = resultadoTexto;
+    return IMC;
+}
+
+function CalcularPorGrasa(){
+    let IMC = CalcularIMC()
+    var Estatura = parseFloat(document.getElementById("Estatura").value);
+    var Peso = parseFloat(document.getElementById("Peso").value);
+    var Edad = parseInt(document.getElementById('Edad').value);
+    var sexoOpcion = document.querySelectorAll('input[type="radio"]');
+
+    var OpcionSeleccionada;
+
+    if (IMC == 0){
+        alert('Calcule su IMC primero');
+    }else{
+        for (let i = 0; i < sexoOpcion.length; i++) {
+            if (sexoOpcion[i].checked) {
+                OpcionSeleccionada = sexoOpcion[i].value;
+                break;
+            }
+        }
+        if (Edad >= 5){
+            if(OpcionSeleccionada == 1){
+                var Porcentaje = (1.20 * IMC) + (0.23 * Edad) - (10.8)- (5.4);
+            }else if(OpcionSeleccionada == 2){
+                var Porcentaje = (1.20 * IMC) + (0.23 * Edad) - 5.4;
+            }
+        }else{
+            alert('Edad debe ser mayor o igual a 5')
+        }  
+    }
+    var mostrarPor = Porcentaje;
+    document.getElementById('resultadoPor').innerText = 'Su indice de grasar corporal es de: ' + mostrarPor.toFixed(2) + '%';
+
+
 }

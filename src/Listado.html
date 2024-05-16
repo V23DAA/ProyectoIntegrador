@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Líneas de Atención en Salud Mental</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 py-8 px-4">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
+    text-lg shadow-md text-cyan-50">
+        <div class="lg:w-[20%] md:w-[35%] sm:w-[40%] flex">
+            <button id="menuButton" class="w-[50px] h-[50px] flex items-center mx-2 hover:bg-[#1b6f82] justify-center rounded-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>          
+            </button>
+            <div class="flex flex-wrap items-center w-[80%] justify-around">
+                <img src="img/logo.jpg" alt="" class="w-[50px] h-[50px] rounded-full">
+                <h1>Salud en armonia</h1>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap lg:w-[15%] md:w-[30%] justify-around">
+            <a class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full" href="Home.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                  </svg>
+            </a>
+
+            <button class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+              </svg>
+            </button>
+        </div>          
+    </nav>
+
+    <!-- Contenedor del menú desplegable -->
+    <div id="menu" class="hidden absolute bg-white border rounded-md shadow-md mt-12">
+        <!-- Lista de funcionalidades -->
+            <ul class="bg-white border rounded-md shadow-md">
+                <li class="py-2 px-4 hover:bg-gray-200">
+                    <div class="text-xl">
+                        <a href="Calculadoras.html" class="mr-2">Calculadoras corporales</a>                   
+                    </div>
+                </li>
+                <li class="py-2 px-4 hover:bg-gray-200">
+                    <div class="text-xl">
+                        <a href="Catalogo.html" class="mr-2">Catalogo comidas saludables</a>                   
+                    </div>
+                </li>
+                <li class="py-2 px-4 hover:bg-gray-200">
+                    <div class="text-xl">
+                        <a href="Listado.html" class="mr-2">Salud mental</a>                   
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    <div class="w-full mt-16 mb-3 p-5">
+        <div class="text-3xl mb-4 font-semibold">AREA DE SALUD MENTAL</div>
+        <div class="text-xl">
+            <img src="img/ImagenSaludMental.jpg" alt="referencia salud mental" class="mx-auto mb-5">
+            <p>
+                La salud mental se refiere al bienestar emocional, psicológico y social de una persona. 
+                Incluye la forma en que pensamos, sentimos, actuamos y nos relacionamos con los demás. 
+                La importancia de la salud mental en la actualidad radica en varios aspectos:
+            </p>       
+
+            <p class="m-3">
+                1. Bienestar general: Una buena salud mental contribuye significativamente al bienestar 
+                general de una persona. Nos permite enfrentar los desafíos de la vida, manejar el estrés, 
+                establecer relaciones saludables y disfrutar de una vida satisfactoria.
+            </p>
+
+            <p class="m-3">
+                2. Productividad y rendimiento: La salud mental influye en nuestra capacidad para concentrarnos, 
+                tomar decisiones, resolver problemas y desempeñarnos eficazmente en nuestras responsabilidades 
+                laborales, académicas y cotidianas.
+            </p>
+
+            <p class="m-3">
+                3. Resiliencia: La salud mental nos ayuda a desarrollar resiliencia, es decir, la capacidad de 
+                recuperarnos de situaciones estresantes, traumas o adversidades. Nos permite adaptarnos a los cambios, 
+                superar obstáculos y seguir adelante en la vida.
+            </p>
+
+            <p class="m-3">
+                4. Relaciones interpersonales: Una buena salud mental facilita la construcción y el mantenimiento de 
+                relaciones saludables con familiares, amigos, colegas y otras personas en nuestra vida. 
+                Contribuye a una comunicación más efectiva, empatía y apoyo mutuo.
+            </p>
+
+            <p class="m-3">
+                5. Prevención de enfermedades físicas: Existe una estrecha relación entre la salud mental y la salud física. 
+                El estrés crónico y los trastornos mentales pueden aumentar el riesgo de desarrollar 
+                enfermedades como enfermedades cardiovasculares, diabetes y problemas inmunológicos.
+            </p>
+
+            <p class="m-3">
+                6. Reducción del estigma: Promover la salud mental ayuda a reducir el estigma y la discriminación 
+                asociados con los trastornos mentales. Alentar la apertura y la comprensión sobre los problemas 
+                de salud mental fomenta un entorno de apoyo y aceptación.
+            </p>
+        </div>
+    </div>
+
+    <div class="w-full">
+        <h1 class="text-2xl font-medium">Enfermedades de tipo mental mas comunes:</h1>
+        <p class="text-xl m-3">
+            
+            Las enfermedades mentales son trastornos que afectan el pensamiento, el estado de ánimo y 
+            el comportamiento de una persona. Algunas de las enfermedades mentales más comunes incluyen:
+        </p>
+
+        <div class="text-xl mt-3">
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Trastornos de ansiedad:</strong> 
+                    Incluyen trastorno de ansiedad generalizada (TAG), trastorno de pánico, 
+                    trastorno obsesivo-compulsivo (TOC), fobias específicas y trastorno de estrés postraumático (TEPT). 
+                    Provocan sentimientos intensos de miedo, preocupación y ansiedad que pueden interferir significativamente en la vida diaria.
+                </p>
+                <img src="img/Ansiedad.jpeg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+            
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Depresión:</strong> 
+                    La depresión es un trastorno del estado de ánimo caracterizado por sentimientos persistentes de tristeza, 
+                    desesperanza, falta de interés o placer en actividades cotidianas. Puede afectar la forma en que una persona piensa, 
+                    siente y maneja las actividades diarias.
+                </p>
+                <img src="img/Depresion.jpg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Trastorno bipolar:</strong> 
+                    Se caracteriza por cambios extremos en el estado de ánimo, que incluyen períodos de manía (euforia extrema, 
+                    irritabilidad, comportamiento impulsivo) y períodos de depresión.
+                </p>
+                <img src="img/Bipolaridad.jpeg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Trastornos alimenticios:</strong> 
+                    Incluyen anorexia nerviosa, bulimia nerviosa y trastorno por atracón. Se caracterizan por una 
+                    preocupación obsesiva por el peso, la comida y la imagen corporal, y pueden tener graves repercusiones en la salud física y emocional.
+                </p>
+                <img src="img/TrastornosAlimentcios.jpeg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Esquizofrenia:</strong> 
+                    Es un trastorno mental grave que afecta la percepción, el pensamiento, las emociones y el comportamiento de una persona. 
+                    Puede causar alucinaciones, delirios, pensamiento desorganizado y dificultad para concentrarse o prestar atención.
+                </p>
+                <img src="img/ESQUIZOFRENIA.jpg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+
+            <div class="flex w-full p-3 bg-[#b4dee5] rounded-md shadow-sm justify-around items-center m-4 mx-auto">
+                <p class="xl:w-[60%] lg:w-[50%] md:w-[40%] sm:[30%]">
+                    <strong>Trastorno por déficit de atención e hiperactividad (TDAH):</strong> 
+                    Se caracteriza por la dificultad para mantener la atención, controlar los impulsos y regular el comportamiento. 
+                    Puede afectar el rendimiento académico, laboral y las relaciones interpersonales.
+                </p>
+                <img src="img/TDAH.jpeg" alt="" class="xl:w-[30%] lg:w-[40%] md:w-[50%] sm:[60%]">
+            </div>
+        </div>
+    </div>
+
+    <div class="flex w-full mx-auto p-3 justify-around items-center">
+        <p class="text-xl w-[30%]">
+            Estos son solo algunos ejemplos de enfermedades mentales comunes, pero existen muchos otros trastornos que pueden afectar 
+            la salud mental de una persona. Es importante buscar ayuda profesional si experimentas síntomas de cualquier trastorno mental, 
+            ya que el tratamiento adecuado puede mejorar significativamente la calidad de vida. Para eso dejamos unas lineas de atencion que te pueden ayudar:
+        </p>
+
+        <div class=" bg-white rounded-xl shadow-md overflow-hidden w-[50%]">
+            <div class="p-8">
+                <div class="mt-2 text-blue-500 font-semibold">Lista de numeros de atención en salud fisica y mental</div>
+                <p class="mt-2 text-gray-500">Aquí encontrarás una lista de números de teléfono de líneas de atención en salud fisica y mental, no dudes en llamar.</p>
+                <table class="table-auto mt-4 mx-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-3 py-2">Línea de Atención</th>
+                            <th class="px-3 py-2">Número de Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">Línea 106</td>
+                            <td class="border px-4 py-2 text-blue-700">300 754 8933</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Línea de la Vida</td>
+                            <td class="border px-4 py-2 text-blue-700">800 911 2000</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Línea diversa</td>
+                            <td class="border px-4 py-2 text-blue-700">310 864 4214</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Línea Psicoactiva</td>
+                            <td class="border px-4 py-2 text-blue-700">01 8000 112 439 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+    <script>
+        // Obtén el botón de menú y el menú desplegable
+        const menuButton = document.getElementById('menuButton');
+        const menu = document.getElementById('menu');
+
+        // Agrega un evento de clic al botón de menú
+        menuButton.addEventListener('click', () => {
+        // Alterna la visibilidad del menú al hacer clic en el botón
+        menu.classList.toggle('hidden');
+        });
+
+        // Agrega un evento de clic en cualquier parte del documento para cerrar el menú
+        document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && event.target !== menuButton) {
+            menu.classList.add('hidden');
+        }
+        });
+    </script>
+</html>

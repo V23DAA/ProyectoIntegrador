@@ -7,14 +7,14 @@
 </head>
 <body>
     <!-- Barra nav -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
-    text-lg shadow-md text-cyan-50">
+    <nav class="top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
+    text-lg shadow-md text-cyan-50 sticky">
         <div class="lg:w-[20%] md:w-[35%] sm:w-[40%] flex">
-            <div class="w-[50px] h-[50px] flex items-center mx-2">
+            <button id="menuButton" class="w-[50px] h-[50px] flex items-center mx-2 hover:bg-[#1b6f82] justify-center rounded-md">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>          
-            </div>
+            </button>
             <div class="flex flex-wrap items-center w-[80%] justify-around">
                 <img src="img/logo.jpg" alt="" class="w-[50px] h-[50px] rounded-full">
                 <h1>Salud en armonia</h1>
@@ -30,12 +30,26 @@
         </div>        
     </nav>
 
-    <div class="bg-cyan-50">
-        <ul id="menu" class="lg:flex lg:items-center lg:space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-300">Inicio</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Acerca de</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Servicios</a></li>
-            <li><a href="#" class="text-white hover:text-gray-300">Contacto</a></li>
+    <!-- Contenedor del menú desplegable -->
+    <div id="menu" class="hidden absolute bg-white border rounded-md shadow-md z-10
+    ">
+    <!-- Lista de funcionalidades -->
+        <ul class="bg-white border rounded-md shadow-md">
+            <li class="py-2 px-4 hover:bg-gray-200">
+                <div class="text-xl">
+                    <a href="Calculadoras.html" class="mr-2">Calculadoras corporales</a>                   
+                </div>
+            </li>
+            <li class="py-2 px-4 hover:bg-gray-200">
+                <div class="text-xl">
+                    <a href="Catalogo.html" class="mr-2">Catalogo comidas saludables</a>                   
+                </div>
+            </li>
+            <li class="py-2 px-4 hover:bg-gray-200">
+                <div class="text-xl">
+                    <a href="Listado.html" class="mr-2">Salud mental</a>                   
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -44,37 +58,89 @@
     lg:h-[700px] bg-contain bg-center md:h-[340px]">
     </div>
     
-
     <!-- contenedor de las frases -->
-    <div class="mx-auto lg:w-[1300px] md:w-[700px] sm:w-[500px] lg:mt-16 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg">
+    <div class="w-full flex justify-center">
+        <div class="w-[90%] lg:mt-16 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg">
 
-        <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#e0ebed] m-3">
-            <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
-                <img src="img/JhonFKennedy.jpeg" alt="foto de Jhon F Kennedy" class="w-[100%]">
+            <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
+                <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
+                    <img src="img/JhonFKennedy.jpeg" alt="foto de Jhon F Kennedy" class="w-[100%]">
+                </div>
+     
+                <div class="w-[70%]">
+                    La actividad física no es solo una de las claves más importantes para un cuerpo saludable, 
+                    es la base de una actividad dinámica y creativa. (John F Kennedy)
+                </div>          
             </div>
- 
-            <div class="w-[70%]">
-                La actividad física no es solo una de las claves más importantes para un cuerpo saludable, 
-                es la base de una actividad dinámica y creativa. (John F Kennedy)
-            </div>          
+    
+            <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
+                <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
+                    <img src="img/c-s-lewis.webp" alt="foto de C. S. Lewis">
+                </div>
+                
+                <div class="w-[70%]">
+                    El dolor mental es menos dramático que el dolor físico, pero es más común 
+                    y también más difícil de soportar. (C. S. Lewis)
+                </div>
+                
+            </div>
+        </div>
+    
+        
+    </div>
+
+    <div class="w-full bg-[#87b1ca] p-3 text-cyan-50 flex flex-wrap h-auto">
+        <div class="w-full flex justify-center font-semibold text-[#0a282f] m-6 bg-[#5c9dd8] rounded-xl drop-shadow-sm h-20 p-4 items-center
+        xl:text-[42pt] lg:text-3xl md:text-2xl sm:text-xl">
+            Consejos saludables:
         </div>
 
-        <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#e0ebed] m-3">
-            <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
-                <img src="img/c-s-lewis.webp" alt="foto de C. S. Lewis">
+        <div class="font-medium text-3xl text-amber-700 w-full flex flex-wrap justify-center">
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl">
+                <p class="w-[60%]">Mantén una dieta equilibrada con alimentos naturales.</p>
+                <img src="img/dieta.jpeg" alt="" class="rounded-lg bg-cover block
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
             </div>
-            
-            <div class="w-[70%]">
-                El dolor mental es menos dramático que el dolor físico, pero es más común 
-                y también más difícil de soportar. (C. S. Lewis)
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Haz ejercicio regularmente, al menos 150 minutos por semana.</p>
+                <img src="img/ejercicio.jpg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
             </div>
-            
-        </div>
-
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Duerme entre 7 y 9 horas cada noche.</p>
+                <img src="img/dormir.jpeg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Gestiona el estrés con técnicas como la meditación.</p>
+                <img src="img/meditacion.jpg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Cultiva relaciones sociales saludables.</p>
+                <img src="img/relacionesSociales.jpeg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Evita el tabaco y el consumo excesivo de alcohol.</p>
+                <img src="img/tabacoOut.jpeg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Realiza chequeos médicos regulares.</p>
+                <img src="img/chequeo.jpeg" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+            <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
+                <p class="w-[60%]">Cuida tu salud mental y busca ayuda si es necesario.</p>
+                <img src="img/saludMental.avif" alt="" class="rounded-lg bg-cover
+                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+            </div>
+        </div>  
     </div>
 
     <!-- pie de pagina -->
-    <footer class="mx-auto flex justify-center p-8 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] w-full h-[350px] font-semibold text-cyan-50">
+    <footer class="py-4 flex p-8 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] w-full h-[350px] font-semibold text-cyan-50">
         <div class="w-[40%] p-3 flex items-center justify-center">
             <h1 class="text-xl">Contáctanos</h1>
             <img src="img/iconos/facebook.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
@@ -89,4 +155,23 @@
         </div>
     </footer>
 </body>
+
+    <script>
+        // Obtén el botón de menú y el menú desplegable
+        const menuButton = document.getElementById('menuButton');
+        const menu = document.getElementById('menu');
+    
+        // Agrega un evento de clic al botón de menú
+        menuButton.addEventListener('click', () => {
+         // Alterna la visibilidad del menú al hacer clic en el botón
+      menu.classList.toggle('hidden');
+        });
+
+        // Agrega un evento de clic en cualquier parte del documento para cerrar el menú
+        document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && event.target !== menuButton) {
+            menu.classList.add('hidden');
+        }
+         });
+  </script>
 </html>
