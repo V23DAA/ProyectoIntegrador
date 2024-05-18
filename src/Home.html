@@ -1,177 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="componentes/NavBar.js" defer></script>
+    <script src="componentes/Footer.js"></script>
+    <script src="componentes/Sidebar.js"></script>
 </head>
-<body>
+
+<body class="relative">
     <!-- Barra nav -->
-    <nav class="top-0 left-0 right-0 z-50 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] max-w-full flex justify-between py-4 px-3 items-center font-semibold 
-    text-lg shadow-md text-cyan-50 sticky">
-        <div class="lg:w-[20%] md:w-[35%] sm:w-[40%] flex">
-            <button id="menuButton" class="w-[50px] h-[50px] flex items-center mx-2 hover:bg-[#1b6f82] justify-center rounded-md">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                  </svg>          
-            </button>
-            <div class="flex flex-wrap items-center w-[80%] justify-around">
-                <img src="img/logo.jpg" alt="" class="w-[50px] h-[50px] rounded-full">
-                <h1>Salud en armonia</h1>
-            </div>
-        </div>
-        
-        <div class="flex flex-wrap lg:w-[15%] md:w-[30%] justify-around">
-            <button class="flex justify-center items-center border-2 border-cyan-100 w-[50px] h-[50px] hover:bg-[#34a4bd] p-1 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-              </svg>
-              </button>
-        </div>        
-    </nav>
+    <custom-navbar></custom-navbar>
 
-    <!-- Contenedor del menú desplegable -->
-    <div id="menu" class="hidden absolute bg-white border rounded-md shadow-md z-10
-    ">
-    <!-- Lista de funcionalidades -->
-        <ul class="bg-white border rounded-md shadow-md">
-            <li class="py-2 px-4 hover:bg-gray-200">
-                <div class="text-xl">
-                    <a href="Calculadoras.html" class="mr-2">Calculadoras corporales</a>                   
-                </div>
-            </li>
-            <li class="py-2 px-4 hover:bg-gray-200">
-                <div class="text-xl">
-                    <a href="Catalogo.html" class="mr-2">Catalogo comidas saludables</a>                   
-                </div>
-            </li>
-            <li class="py-2 px-4 hover:bg-gray-200">
-                <div class="text-xl">
-                    <a href="Listado.html" class="mr-2">Salud mental</a>                   
-                </div>
-            </li>
-        </ul>
-    </div>
+    <!-- Sidebar -->
+    <custom-sidebar></custom-sidebar>
 
-    <!-- Deslizador -->
-    <div class="mx-auto max-w-full bg-[url(https://lh3.googleusercontent.com/-lkIlNSPqRCU/X4NUZlMliAI/AAAAAAAABhY/jMmZ4Eauef80fJTn38L-bIXYFldY7AMkACLcBGAsYHQ/w1200-h630-p-k-no-nu/image.png)] 
-    lg:h-[700px] bg-contain bg-center md:h-[340px]">
-    </div>
-    
     <!-- contenedor de las frases -->
     <div class="w-full flex justify-center">
         <div class="w-[90%] lg:mt-16 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg">
+            <div
+                class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
+                <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
+                    <img src="img/JhonFKennedy.jpeg" alt="foto de Jhon F Kennedy" class="w-[100%]" />
+                </div>
 
-            <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
-                <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
-                    <img src="img/JhonFKennedy.jpeg" alt="foto de Jhon F Kennedy" class="w-[100%]">
-                </div>
-     
                 <div class="w-[70%]">
-                    La actividad física no es solo una de las claves más importantes para un cuerpo saludable, 
-                    es la base de una actividad dinámica y creativa. (John F Kennedy)
-                </div>          
+                    La actividad física no es solo una de las claves más importantes
+                    para un cuerpo saludable, es la base de una actividad dinámica y
+                    creativa. (John F Kennedy)
+                </div>
             </div>
-    
-            <div class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
+
+            <div
+                class="w-[100%] p-6 text-2xl font-sans font-semibold text-center flex items-center bg-[#87b1ca] rounded-md m-3">
                 <div class="w-[30%] h-[300px]overflow-hidden m-4 flex justify-center">
-                    <img src="img/c-s-lewis.webp" alt="foto de C. S. Lewis">
+                    <img src="img/c-s-lewis.webp" alt="foto de C. S. Lewis" />
                 </div>
-                
+
                 <div class="w-[70%]">
-                    El dolor mental es menos dramático que el dolor físico, pero es más común 
-                    y también más difícil de soportar. (C. S. Lewis)
+                    El dolor mental es menos dramático que el dolor físico, pero es más
+                    común y también más difícil de soportar. (C. S. Lewis)
                 </div>
-                
             </div>
         </div>
-    
-        
     </div>
 
     <div class="w-full bg-[#87b1ca] p-3 text-cyan-50 flex flex-wrap h-auto">
-        <div class="w-full flex justify-center font-semibold text-[#0a282f] m-6 bg-[#5c9dd8] rounded-xl drop-shadow-sm h-20 p-4 items-center
-        xl:text-[42pt] lg:text-3xl md:text-2xl sm:text-xl">
+        <div
+            class="w-full flex justify-center font-semibold text-[#0a282f] m-6 bg-[#5c9dd8] rounded-xl drop-shadow-sm h-20 p-4 items-center xl:text-[42pt] lg:text-3xl md:text-2xl sm:text-xl">
             Consejos saludables:
         </div>
 
         <div class="font-medium text-3xl text-amber-700 w-full flex flex-wrap justify-center">
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl">
-                <p class="w-[60%]">Mantén una dieta equilibrada con alimentos naturales.</p>
-                <img src="img/dieta.jpeg" alt="" class="rounded-lg bg-cover block
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <p class="w-[60%]">
+                    Mantén una dieta equilibrada con alimentos naturales.
+                </p>
+                <img src="img/dieta.jpeg" alt=""
+                    class="rounded-lg bg-cover block xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
-                <p class="w-[60%]">Haz ejercicio regularmente, al menos 150 minutos por semana.</p>
-                <img src="img/ejercicio.jpg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <p class="w-[60%]">
+                    Haz ejercicio regularmente, al menos 150 minutos por semana.
+                </p>
+                <img src="img/ejercicio.jpg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
                 <p class="w-[60%]">Duerme entre 7 y 9 horas cada noche.</p>
-                <img src="img/dormir.jpeg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <img src="img/dormir.jpeg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
-                <p class="w-[60%]">Gestiona el estrés con técnicas como la meditación.</p>
-                <img src="img/meditacion.jpg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <p class="w-[60%]">
+                    Gestiona el estrés con técnicas como la meditación.
+                </p>
+                <img src="img/meditacion.jpg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
                 <p class="w-[60%]">Cultiva relaciones sociales saludables.</p>
-                <img src="img/relacionesSociales.jpeg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <img src="img/relacionesSociales.jpeg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
-                <p class="w-[60%]">Evita el tabaco y el consumo excesivo de alcohol.</p>
-                <img src="img/tabacoOut.jpeg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <p class="w-[60%]">
+                    Evita el tabaco y el consumo excesivo de alcohol.
+                </p>
+                <img src="img/tabacoOut.jpeg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
                 <p class="w-[60%]">Realiza chequeos médicos regulares.</p>
-                <img src="img/chequeo.jpeg" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <img src="img/chequeo.jpeg" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
             <div class="flex justify-around items-center text-center w-[90%] bg-[#e6efee] p-3 rounded-xl m-2">
-                <p class="w-[60%]">Cuida tu salud mental y busca ayuda si es necesario.</p>
-                <img src="img/saludMental.avif" alt="" class="rounded-lg bg-cover
-                xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]">
+                <p class="w-[60%]">
+                    Cuida tu salud mental y busca ayuda si es necesario.
+                </p>
+                <img src="img/saludMental.avif" alt=""
+                    class="rounded-lg bg-cover xl:w-[300px] lg:w-[250px] md:w-[200px] sm:w-[150px]" />
             </div>
-        </div>  
+        </div>
     </div>
-
     <!-- pie de pagina -->
-    <footer class="py-4 flex p-8 bg-gradient-to-r from-[#65a0ad] to-[#1b6f82] w-full h-[350px] font-semibold text-cyan-50">
-        <div class="w-[40%] p-3 flex items-center justify-center">
-            <h1 class="text-xl">Contáctanos</h1>
-            <img src="img/iconos/facebook.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
-            <img src="img/iconos/instagram.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
-            <img src="img/iconos/twitter.svg" alt="logo facebook" class="w-[30px] h-[30px] m-2">
-        </div>
-        <div class="w-[40%] p-3 flex items-center justify-center">
-            <h1 class="text-xl">Comparte</h1>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[30px] h-[30px] m-2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
-              </svg>
-        </div>
-    </footer>
+    <custom-footer></custom-footer>
+
 </body>
-
-    <script>
-        // Obtén el botón de menú y el menú desplegable
-        const menuButton = document.getElementById('menuButton');
-        const menu = document.getElementById('menu');
-    
-        // Agrega un evento de clic al botón de menú
-        menuButton.addEventListener('click', () => {
-         // Alterna la visibilidad del menú al hacer clic en el botón
-      menu.classList.toggle('hidden');
-        });
-
-        // Agrega un evento de clic en cualquier parte del documento para cerrar el menú
-        document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && event.target !== menuButton) {
-            menu.classList.add('hidden');
-        }
-         });
-  </script>
 </html>
