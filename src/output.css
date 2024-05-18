@@ -562,10 +562,6 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
-}
-
 .sticky {
   position: sticky;
 }
@@ -588,10 +584,6 @@ video {
 
 .z-50 {
   z-index: 50;
-}
-
-.float-left {
-  float: left;
 }
 
 .m-2 {
@@ -682,6 +674,10 @@ video {
 
 .mt-\[100px\] {
   margin-top: 100px;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .block {
@@ -800,8 +796,12 @@ video {
   width: 100%;
 }
 
-.w-\[20\%\] {
-  width: 20%;
+.w-60 {
+  width: 15rem;
+}
+
+.w-\[85\%\] {
+  width: 85%;
 }
 
 .max-w-full {
@@ -939,9 +939,9 @@ video {
   background-color: rgb(175 230 243 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#e0ebed\] {
+.bg-\[\#b4dee5\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(224 235 237 / var(--tw-bg-opacity));
+  background-color: rgb(180 222 229 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#e2edee\] {
@@ -952,11 +952,6 @@ video {
 .bg-\[\#e6efee\] {
   --tw-bg-opacity: 1;
   background-color: rgb(230 239 238 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#fcfbe4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 251 228 / var(--tw-bg-opacity));
 }
 
 .bg-blue-600 {
@@ -974,11 +969,6 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -989,29 +979,14 @@ video {
   background-color: rgb(254 252 232 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#e5fce4\] {
+.bg-red-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(229 252 228 / var(--tw-bg-opacity));
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#e4f9fc\] {
+.bg-violet-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(228 249 252 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#a7ced3\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(167 206 211 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b4dfe5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(180 223 229 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b4dee5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(180 222 229 / var(--tw-bg-opacity));
+  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(https\:\/\/lh3\.googleusercontent\.com\/-lkIlNSPqRCU\/X4NUZlMliAI\/AAAAAAAABhY\/jMmZ4Eauef80fJTn38L-bIXYFldY7AMkACLcBGAsYHQ\/w1200-h630-p-k-no-nu\/image\.png\)\] {
@@ -1385,6 +1360,10 @@ video {
 
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[30\%\] {
+    width: 30%;
   }
 
   .lg\:text-3xl {
