@@ -18,7 +18,7 @@
     <!-- Sidebar -->
     <custom-sidebar></custom-sidebar>
 
-    <div class="mx-auto  p-6 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg mt-[100px] w-[80%]">
+    <div class="mx-auto p-6 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg mt-[100px] w-[90%]">
         <div class="w-[100%] p-2 flex flex-wrap">
             <h1 class="text-3xl font-semibold text-center w-[100%] mb-8">Herramientas para Evaluar tu Salud: Calculadora
                 de IMC y Porcentaje de Grasa</h1>
@@ -56,9 +56,6 @@
                     </div>
                     <button onclick="CalcularIMC()"
                         class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
-                    <p id="resultado" class="w-[100%] mt-3 text-xl font-medium">Su valor de IMC es: </p>
-                    <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:
-                    </p>
                 </div>
 
                 <div class="w-[100%] bg-[#AFE6F3] rounded-md mt-2 flex justify-center p-2">
@@ -160,13 +157,63 @@
 
                     <button onclick="CalcularPorGrasa()"
                         class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
-                    <p id="resultadoPor" class="w-[100%] mt-3 text-xl font-medium">Su porcentaje de grasa es de: </p>
 
+                </div>
+
+                <div class="bg-gray-200 m-5 p-2 flex flex-wrap items-center justify-around rounded-md">
+                    <h1 class="text-lg">Resultados de evaluacion:</h1>
+                    <button
+                        id="openModalBtn"
+                        class="bg-[#186b7d] w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50"
+                        onclick="mostrarResultados()">
+                        Ver informe
+                    </button>
                 </div>
             </div>
 
         </div>
+
+    </div>
+    <div id="modal" class="bg-gray-100 inset-0 rounded-md mx-auto p-5 hidden relative
+    xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+        <div class="bg-gray-300 w-[100%] p-2 rounded-md text-center text-xl font-semibold">Informe</div>
+
+        <div class="mt-5 flex w-[100%] justify-around">
+            <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
+                <p id="resultado" class="w-[100%] mt-3 text-lg">Su valor de IMC es: </p>
+                <p id="resultadoPor" class="w-[100%] mt-3 text-lg">Su porcentaje de grasa es de: </p>
+                <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:</p>
+            </div>
+            <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
+                <img src="img/somatotipos/Somatotipos.webp" alt="">
+                <p class="text-xl font-medium">Posible somatotipo: </p>
+                <p id="resultadoSomatotipo" class="w-[100%] mt-3 text-xl font-medium"></p>
+                <div>
+                    <div id="ectomorfo">
+                        <p>-Cuerpo delgado y esbelto, con hombros estrechos y extremidades largas.</p>
+                        <p>-Metabolismo rápido, lo que facilita la pérdida de peso.</p>
+                        <p>-Dificultad para ganar masa muscular.</p>
+                        <p>-Dieta recomendada: mayor ingesta calórica, proteínas, grasas saludables y vegetales.</p>
+                    </div>
+                    <div id="endomorfo">
+                        <p>-Mayor acumulación de grasa corporal.</p>
+                        <p>-Tendencia a la redondez y caderas más anchas.</p>
+                        <p>-Metabolismo más lento.</p>
+                        <p>-Dieta recomendada: control de calorías, alimentos ricos en fibra y actividad física regular.
+                        </p>
+                    </div>
+                    <div id="mesomorfo">
+                        <p>-Cuerpo atlético, con buena masa muscular y estructura ósea sólida.</p>
+                        <p>-Metabolismo equilibrado.</p>
+                        <p>-Buena capacidad para ganar y mantener músculo.</p>
+                        <p>-Dieta recomendada: balanceada, con énfasis en proteínas y ejercicio de resistencia.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button id="closeModalBtn" class="p-3 rounded-md bg-red-700 hover:bg-red-500 text-white text-lg font-medium m-3 flex items-center">Cerrar</button>
+    </div>
     </div>
 </body>
-
 </html>
