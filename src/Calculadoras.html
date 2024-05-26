@@ -18,6 +18,8 @@
     <!-- Sidebar -->
     <custom-sidebar></custom-sidebar>
 
+    <iframe id="paginaHistorial" src="Historial_Informes.html" frameborder="0" class="hidden"></iframe>
+
     <div class="mx-auto p-6 mb-9 flex flex-wrap h-300px rounded-lg drop-shadow-lg mt-[100px] w-[90%]">
         <div class="w-[100%] p-2 flex flex-wrap">
             <h1 class="text-3xl font-semibold text-center w-[100%] mb-8">Herramientas para Evaluar tu Salud: Calculadora
@@ -28,7 +30,7 @@
                     precisos, consultar con profesionales para obtener informes reales.</p>
             </div>
 
-            <div class="w-[50%] p-3">
+            <div class="w-[50%] p-3 flex flex-wrap justify-center">
                 <h2 class="text-2xl text-center font-bold md:text-xl">Indice de masa corporal</h2>
                 <p class="mt-5 text-xl">
                     El índice de masa corporal (IMC) es una medida que se utiliza para evaluar si una persona tiene un
@@ -40,25 +42,9 @@
                     La fórmula del IMC se expresa como:
                     IMC=altura2peso​
                 </p>
-                <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] mt-2 p-3">
-                    <div class="w-[100%]">
-                        <label for="" class="font-semibold">ESTATURA</label>
-                        <input id="Estatura" type="number"
-                            class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400"
-                            placeholder="Estatura en metros">
-                    </div>
 
-                    <div class="w-[100%] mt-2">
-                        <label for="" class="font-semibold">PESO</label>
-                        <input id="Peso" type="number"
-                            class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400"
-                            placeholder="Peso en kg">
-                    </div>
-                    <button onclick="CalcularIMC()"
-                        class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
-                </div>
 
-                <div class="w-[100%] bg-[#AFE6F3] rounded-md mt-2 flex justify-center p-2">
+                <div class="w-[80%] bg-gray-200 rounded-md mt-2 flex justify-center p-2">
                     <table class="mt-4">
                         <thead>
                             <tr>
@@ -102,6 +88,10 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="w-[80%] m-3 rounded-md overflow-hidden">
+                    <img src="img/dieta_y_ejercicio.jpg" alt="imagen IMC" class="w-[100%]">
+                </div>
+
             </div>
 
             <div class="w-[50%] p-3">
@@ -133,7 +123,27 @@
                     Mujer = 0
 
                 </p>
-                <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] mt-2 p-3">
+                <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] m-5 p-3">
+                    <h3 class="text-xl font-semibold m-2 flex">Calcular IMC(Indice de masa corporal): </h3>
+                    <div class="w-[100%]">
+                        <label for="" class="font-semibold">ESTATURA(metros)</label>
+                        <input id="Estatura" type="number"
+                            class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400"
+                            placeholder="Estatura en metros">
+                    </div>
+
+                    <div class="w-[100%] mt-2">
+                        <label for="" class="font-semibold">PESO(Kg)</label>
+                        <input id="Peso" type="number"
+                            class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400"
+                            placeholder="Peso en kg">
+                    </div>
+                    <button onclick="CalcularIMC()"
+                        class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                </div>
+
+                <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] m-5 p-3">
+                    <h3 class="text-xl font-semibold m-2 flex">Calcular porcentaje de grasa corporal: </h3>
                     <div class="w-[100%]">
                         <label for="" class="font-semibold">Edad</label>
                         <input id="Edad" type="number"
@@ -162,58 +172,195 @@
 
                 <div class="bg-gray-200 m-5 p-2 flex flex-wrap items-center justify-around rounded-md">
                     <h1 class="text-lg">Resultados de evaluacion:</h1>
-                    <button
-                        id="openModalBtn"
+                    <button id="openModalBtn"
                         class="bg-[#186b7d] w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50"
                         onclick="mostrarResultados()">
                         Ver informe
                     </button>
                 </div>
             </div>
-
         </div>
-
     </div>
-    <div id="modal" class="bg-gray-100 inset-0 rounded-md mx-auto p-5 hidden relative
-    xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
-        <div class="bg-gray-300 w-[100%] p-2 rounded-md text-center text-xl font-semibold">Informe</div>
 
-        <div class="mt-5 flex w-[100%] justify-around">
-            <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
-                <p id="resultado" class="w-[100%] mt-3 text-lg">Su valor de IMC es: </p>
-                <p id="resultadoPor" class="w-[100%] mt-3 text-lg">Su porcentaje de grasa es de: </p>
-                <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:</p>
-            </div>
-            <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
-                <img src="img/somatotipos/Somatotipos.webp" alt="">
-                <p class="text-xl font-medium">Posible somatotipo: </p>
-                <p id="resultadoSomatotipo" class="w-[100%] mt-3 text-xl font-medium"></p>
-                <div>
-                    <div id="ectomorfo">
-                        <p>-Cuerpo delgado y esbelto, con hombros estrechos y extremidades largas.</p>
-                        <p>-Metabolismo rápido, lo que facilita la pérdida de peso.</p>
-                        <p>-Dificultad para ganar masa muscular.</p>
-                        <p>-Dieta recomendada: mayor ingesta calórica, proteínas, grasas saludables y vegetales.</p>
-                    </div>
-                    <div id="endomorfo">
-                        <p>-Mayor acumulación de grasa corporal.</p>
-                        <p>-Tendencia a la redondez y caderas más anchas.</p>
-                        <p>-Metabolismo más lento.</p>
-                        <p>-Dieta recomendada: control de calorías, alimentos ricos en fibra y actividad física regular.
-                        </p>
-                    </div>
-                    <div id="mesomorfo">
-                        <p>-Cuerpo atlético, con buena masa muscular y estructura ósea sólida.</p>
-                        <p>-Metabolismo equilibrado.</p>
-                        <p>-Buena capacidad para ganar y mantener músculo.</p>
-                        <p>-Dieta recomendada: balanceada, con énfasis en proteínas y ejercicio de resistencia.</p>
+    
+    <div class="flex mx-auto w-[100%]">
+        <div id="modal" class="bg-gray-100 inset-0 rounded-md mx-auto p-5 hidden w-[60%]
+        xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+            <div class="bg-gray-300 w-[100%] p-2 rounded-md text-center text-xl font-semibold">Informe</div>
+    
+            <div class="mt-5 flex w-[100%] justify-around">
+                <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
+                    <p id="resultado" class="w-[100%] mt-3 text-lg">Su valor de IMC es: </p>
+                    <p id="resultadoPor" class="w-[100%] mt-3 text-lg">Su porcentaje de grasa es de: </p>
+                    <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:</p>
+                </div>
+                <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
+                    <img src="img/somatotipos/Somatotipos.webp" alt="">
+                    <p class="text-xl font-medium">Posible somatotipo: </p>
+                    <p id="resultadoSomatotipo" class="w-[100%] mt-3 text-xl font-medium"></p>
+                    <div>
+                        <div id="ectomorfo" class="hidden">
+                            <p>-Cuerpo delgado y esbelto, con hombros estrechos y extremidades largas.</p>
+                            <p>-Metabolismo rápido, lo que facilita la pérdida de peso.</p>
+                            <p>-Dificultad para ganar masa muscular.</p>
+                            <p>-Dieta recomendada: mayor ingesta calórica, proteínas, grasas saludables y vegetales.</p>
+                        </div>
+                        <div id="endomorfo" class="hidden">
+                            <p>-Mayor acumulación de grasa corporal.</p>
+                            <p>-Tendencia a la redondez y caderas más anchas.</p>
+                            <p>-Metabolismo más lento.</p>
+                            <p>-Dieta recomendada: control de calorías, alimentos ricos en fibra y actividad física regular.
+                            </p>
+                        </div>
+                        <div id="mesomorfo" class="hidden">
+                            <p>-Cuerpo atlético, con buena masa muscular y estructura ósea sólida.</p>
+                            <p>-Metabolismo equilibrado.</p>
+                            <p>-Buena capacidad para ganar y mantener músculo.</p>
+                            <p>-Dieta recomendada: balanceada, con énfasis en proteínas y ejercicio de resistencia.</p>
+                        </div>
                     </div>
                 </div>
+    
             </div>
-
+            <div class="w-[100%] mx-auto">
+                <section id="dietaEctomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
+                    <h2 class="text-xl font-semibold mb-4">Dieta Recomendada para Ectomorfos</h2>
+                    <button
+                        class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        onclick="toggleDiet('Divectomorfo')">
+                        Ver más
+                    </button>
+                    <div id="Divectomorfo" class="hidden">
+                        <br>
+                        <p class="mb-4">Los ectomorfos tienen cuerpos delgados y esbeltos, con hombros estrechos y
+                            extremidades largas. Tienen un metabolismo rápido y pueden tener dificultad para ganar masa
+                            muscular. Aquí tienes una dieta recomendada para ayudar a los ectomorfos a ganar peso y masa
+                            muscular:</p>
+                        <h3 class="text-lg font-semibold mb-2">Desayuno</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Avena con leche entera, frutas y nueces</li>
+                            <li>Huevos revueltos con espinacas y queso</li>
+                            <li>Batido de proteínas con plátano y mantequilla de maní</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Almuerzo</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Pechuga de pollo a la plancha con arroz integral y vegetales</li>
+                            <li>Pasta con salsa de tomate, carne molida y queso parmesano</li>
+                            <li>Ensalada de quinoa con aguacate, frijoles negros y maíz</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Cena</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Salmón al horno con papas asadas y espárragos</li>
+                            <li>Tacos de carne con guacamole, queso y salsa</li>
+                            <li>Pizza casera con masa integral, pollo y vegetales</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Snacks</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Yogur griego con miel y almendras</li>
+                            <li>Batido de proteínas con frutos rojos</li>
+                            <li>Hummus con zanahorias y apio</li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <section id="dietaMesomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
+                    <h2 class="text-xl font-semibold mb-4">Dieta Recomendada para Mesomorfos</h2>
+                    <button
+                        class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        onclick="toggleDiet('Divmesomorfo')">
+                        Ver más
+                    </button>
+                    <div id="Divmesomorfo" class="hidden">
+                        <br>
+                        <p class="mb-4">Los mesomorfos tienen cuerpos musculosos y atléticos, con facilidad para ganar y
+                            perder peso. Aquí tienes una dieta recomendada para mantener una composición corporal
+                            equilibrada:</p>
+                        <h3 class="text-lg font-semibold mb-2">Desayuno</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Batido de proteínas con espinacas y frutas</li>
+                            <li>Tostadas integrales con aguacate y huevos</li>
+                            <li>Yogur griego con granola y bayas</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Almuerzo</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Pollo asado con quinoa y brócoli</li>
+                            <li>Pasta integral con pesto y pechuga de pavo</li>
+                            <li>Ensalada de garbanzos con tomates, pepino y feta</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Cena</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Pescado a la parrilla con batatas y espinacas</li>
+                            <li>Fajitas de pollo con pimientos y cebolla</li>
+                            <li>Ensalada de atún con vegetales mixtos y aderezo ligero</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Snacks</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Frutos secos y frutas deshidratadas</li>
+                            <li>Palitos de zanahoria con hummus</li>
+                            <li>Batido de proteínas con leche de almendra</li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <section id="dietaEndomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
+                    <h2 class="text-xl font-semibold mb-4">Dieta Recomendada para Endomorfos</h2>
+                    <button
+                        class="mt-5 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        onclick="toggleDiet('Divendomorfo')">
+                        Ver más
+                    </button>
+                    <div id="Divendomorfo" class="hidden">
+                        <br>
+                        <p class="mb-4">Los endomorfos tienden a tener cuerpos más redondeados y pueden ganar peso
+                            fácilmente. Aquí tienes una dieta recomendada para ayudar a controlar el peso y mantener la
+                            energía:</p>
+                        <h3 class="text-lg font-semibold mb-2">Desayuno</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Claras de huevo revueltas con espinacas y champiñones</li>
+                            <li>Avena con leche de almendra y frutos rojos</li>
+                            <li>Batido verde con espinacas, apio, manzana y jengibre</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Almuerzo</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Pechuga de pavo con ensalada de col rizada y quinoa</li>
+                            <li>Pescado al vapor con arroz integral y brócoli</li>
+                            <li>Ensalada de pollo con aguacate, espinacas y aderezo de limón</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Cena</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Pavo al horno con puré de coliflor y espárragos</li>
+                            <li>Salteado de tofu con vegetales y salsa de soja baja en sodio</li>
+                            <li>Sopa de lentejas con espinacas y zanahorias</li>
+                        </ul>
+                        <h3 class="text-lg font-semibold mb-2">Snacks</h3>
+                        <ul class="list-disc list-inside mb-4">
+                            <li>Rodajas de manzana con mantequilla de almendra</li>
+                            <li>Palitos de apio con queso cottage</li>
+                            <li>Batido de proteínas con espirulina</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+    
+            <div class="w-[100%] mx-auto flex justify-around items-center bg-gray-300 p-1">
+                <button id="closeModalBtn"
+                class="p-3 rounded-md bg-red-700 hover:bg-red-500 text-white text-lg font-medium m-3 flex items-center">Cerrar</button>
+    
+                <button id="Guardar"
+                class="p-3 rounded-md bg-green-700 hover:bg-green-500 text-white text-lg font-medium m-3 flex items-center">Guardar</button>
+            </div>    
+    
         </div>
-        <button id="closeModalBtn" class="p-3 rounded-md bg-red-700 hover:bg-red-500 text-white text-lg font-medium m-3 flex items-center">Cerrar</button>
+
+        <div id="listaInformes" class="p-4 w-[40%] hidden">
+            <h1 class="text-xl font-semibold">Historial de informes: </h1>
+            <div id="historial" class="space-y-4">
+                <!-- Los informes guardados se mostrarán aquí -->
+            </div>
+        </div>
     </div>
+    
     </div>
 </body>
+
 </html>
