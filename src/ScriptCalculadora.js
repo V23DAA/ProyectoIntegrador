@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //enviar datos
+    //guardar datos en el informe
     const guardarBoton = document.getElementById('Guardar');
     const historial = document.getElementById('historial');
     let contador = 0;

@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <script src="componentes/NavBar.js" defer></script>
+
+  <script src="componentes/Sidebar.js"></script>
+  <style>
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Barra nav -->
+  <custom-navbar></custom-navbar>
+
+  <!-- Sidebar -->
+  <custom-sidebar></custom-sidebar>
+
+  <div class="p-3 m-3">
+    <h1 class="text-3xl font-semibold mb-3">
+      Entrenamiento fisico
+    </h1>
+
+    <p class="text-xl">
+      El entrenamiento físico es un conjunto de ejercicios planificados que mejoran la condición física y la salud
+      general.
+      Incluye actividades cardiovasculares, de fuerza, flexibilidad, equilibrio, agilidad y potencia,
+      adaptables a diferentes niveles y objetivos.
+    </p>
+
+    <div>
+      <h2 class="text-xl font-semibold mt-3">Importancia del Entrenamiento en el Cuidado de la Salud Física</h2>
+      <p class="text-xl m-2">
+        Salud Cardiovascular: Mejora la circulación y fortalece el corazón, reduciendo el riesgo de enfermedades cardiovasculares.
+      </p>
+      <p class="text-xl m-2">
+        Fortalecimiento Muscular y Óseo: Aumenta la masa muscular y densidad ósea, previniendo sarcopenia y osteoporosis.
+      </p>
+      <p class="text-xl m-2">
+        Flexibilidad y Movilidad: Mejora el rango de movimiento, reduciendo el riesgo de lesiones.
+      </p>
+      <p class="text-xl m-2">
+        Control del Peso: Ayuda a mantener un peso saludable, previniendo la obesidad y sus complicaciones.
+      </p>
+      <p class="text-xl m-2">
+        Salud Mental: Libera endorfinas, mejorando el estado de ánimo y reduciendo el estrés y la ansiedad.
+      </p>
+      <p class="text-xl m-2">
+        Mejora del Sueño: Favorece un sueño más profundo y reparador.
+      </p>
+      <p class="text-xl m-2">
+        Aumento de Energía: Incrementa los niveles de energía y reduce la fatiga.
+      </p>
+    </div>
+    <h2 class="text-2xl font-semibold mt-3">TIPOS DE ENTRENAMIENTO:</h2>
+
+  </div>
+
+  <!-- fuerza -->
+  <div class="bg-white rounded-md shadow-md mx-auto mt-5
+  xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+
+    <div
+      class="bg-[#65a0ad] hover:bg-[#296876] text-cyan-50 w-[100%] flex justify-around p-2 h-16 items-center rounded-md"
+      onclick="toggleContent('fuerza')">
+      <h2 id="title" class="text-xl font-bold">Entrenamiento de fuerza</h2>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="fuerza" class="flex flex-wrap transition-all bg-white p-4 text-lg">
+      <p class="">
+        <strong>Descripción:</strong> Enfocado en aumentar la fuerza y la masa muscular mediante la resistencia
+        progresiva.
+        Puede implicar el uso de pesas libres, máquinas de pesas, bandas de resistencia o el peso corporal.
+      </p>
+      <p>
+        <strong>Ejemplos:</strong> Levantamiento de pesas, ejercicios con bandas de resistencia,
+        calistenia (como flexiones y dominadas).
+      </p>
+    </div>
+  </div>
+
+  <!-- Entrenamiento de Resistencia -->
+  <div class="bg-white rounded-md shadow-md mx-auto mt-5
+  xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+
+    <div
+      class="bg-[#65a0ad] hover:bg-[#296876] text-cyan-50 w-[100%] flex justify-around p-2 h-16 items-center rounded-md"
+      onclick="toggleContent('resistencia')">
+      <h2 id="title" class="text-xl font-bold">Entrenamiento de Resistencia</h2>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="resistencia" class="flex flex-wrap transition-all bg-white p-4 text-lg">
+      <p>
+        <strong>Descripción:</strong> Este tipo de entrenamiento está diseñado para mejorar la capacidad
+        cardiovascular y la resistencia. Incluye actividades que elevan la frecuencia cardíaca durante períodos
+        prolongados.
+      </p>
+      <p>
+        <strong>Ejemplos:</strong>Correr, ciclismo, natación, remo, clases de aeróbicos.
+      </p>
+    </div>
+  </div>
+
+  <!-- Entrenamiento de Flexibilidad -->
+  <div class="bg-white rounded-md shadow-md mx-auto mt-5
+  xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+
+    <div
+      class="bg-[#65a0ad] hover:bg-[#296876] text-cyan-50 w-[100%] flex justify-around p-2 h-16 items-center rounded-md"
+      onclick="toggleContent('flexibilidad')">
+      <h2 id="title" class="text-xl font-bold">Entrenamiento de Flexibilidad</h2>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="flexibilidad" class="flex flex-wrap transition-all bg-white p-4 text-lg">
+      <p>
+        <strong>Descripción:</strong> Este tipo de entrenamiento busca mejorar la
+        flexibilidad de los músculos y la amplitud de movimiento en las articulaciones. Suele involucrar estiramientos
+        sostenidos.
+      </p>
+      <p>
+        <strong>Ejemplos:</strong>Estiramientos estáticos, estiramientos dinámicos, yoga.
+      </p>
+    </div>
+  </div>
+
+  <!-- Entrenamiento Potencia -->
+  <div class="bg-white rounded-md shadow-md mx-auto mt-5
+  xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+
+    <div
+      class="bg-[#65a0ad] hover:bg-[#296876] text-cyan-50 w-[100%] flex justify-around p-2 h-16 items-center rounded-md"
+      onclick="toggleContent('potencia')">
+      <h2 id="title" class="text-xl font-bold">Entrenamiento de Potencia</h2>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="potencia" class="flex flex-wrap transition-all bg-white p-4 text-lg">
+      <p>
+        <strong>Descripción:</strong> Enfocado en desarrollar
+        la capacidad de generar fuerza explosiva en el menor tiempo posible. Combina fuerza y velocidad.
+      </p>
+      <p>
+        <strong>Ejemplos:</strong>Levantamientos olímpicos (como el clean and jerk),
+        saltos pliométricos, sprints.
+      </p>
+    </div>
+  </div>
+
+  <!-- Entrenamiento Funcional -->
+  <div class="bg-white rounded-md shadow-md mx-auto mt-5
+  xl:w-[50%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
+
+    <div
+      class="bg-[#65a0ad] hover:bg-[#296876] text-cyan-50 w-[100%] flex justify-around p-2 h-16 items-center rounded-md"
+      onclick="toggleContent('Funcional')">
+      <h2 id="title" class="text-xl font-bold">Entrenamiento Funcional</h2>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="Funcional" class="flex flex-wrap transition-all bg-white p-4 text-lg">
+      <p>
+        <strong>Descripción:</strong> Diseñado para mejorar la capacidad de realizar actividades diarias.
+        Se enfoca en movimientos que se asemejan a las tareas cotidianas y a los patrones de movimiento naturales.
+      </p>
+      <p>
+        <strong>Ejemplos:</strong>Sentadillas, levantamientos de peso muerto, ejercicios con kettlebells.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.classList.toggle('hidden');
+      content.classList.toggle('max-h-0');
+    }
+  </script>
+</body>
+
+</html>
