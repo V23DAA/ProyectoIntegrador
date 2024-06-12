@@ -138,8 +138,16 @@
                             class="w-[100%] shadow-md h-10 rounded-md p-2 border-2 border-slate-300 placeholder-slate-400"
                             placeholder="Peso en kg">
                     </div>
-                    <button onclick="CalcularIMC()"
-                        class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                    <div class="flex justify-center items-center">
+                        <button onclick="CalcularIMC()"
+                            class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                        <svg id="imc" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 ml-3 hidden">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
+
+
                 </div>
 
                 <div class="flex justify-center flex-wrap rounded-md bg-[#AFE6F3] m-5 p-3">
@@ -164,9 +172,14 @@
                         </div>
 
                     </div>
-
-                    <button onclick="CalcularPorGrasa()"
-                        class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                    <div class="flex justify-center items-center">
+                        <button onclick="CalcularPorGrasa()"
+                            class="bg-[#186b7d] mt-5 w-40 h-10 rounded-md shadow-md hover:bg-[#34a4bd] font-semibold text-cyan-50">Calcular</button>
+                        <svg id="grasa" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6 ml-3 hidden">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                        </svg>
+                    </div>
 
                 </div>
 
@@ -182,17 +195,18 @@
         </div>
     </div>
 
-    
+
     <div class="flex mx-auto w-[100%]">
         <div id="modal" class="bg-gray-100 inset-0 rounded-md mx-auto p-2 hidden w-[60%]
         xl:w-[60%] lg:w-[60%] md:w-[70%] sm:w-[80%]">
             <div class="bg-gray-300 w-[100%] p-2 rounded-md text-center text-xl font-semibold">Informe</div>
-    
+
             <div class="mt-5 flex w-[100%] justify-around">
                 <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
                     <p id="resultado" class="w-[100%] mt-3 text-lg">Su valor de IMC es: </p>
                     <p id="resultadoPor" class="w-[100%] mt-3 text-lg">Su porcentaje de grasa es de: </p>
-                    <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:</p>
+                    <p id="clasificacion" class="w-[100%] mt-3 text-xl font-medium">Su clasificacion segun el IMC es:
+                    </p>
                 </div>
                 <div class="w-[45%] border-2 border-gray-300 rounded-md p-3">
                     <img src="img/somatotipos/Somatotipos.webp" alt="">
@@ -209,7 +223,8 @@
                             <p>-Mayor acumulación de grasa corporal.</p>
                             <p>-Tendencia a la redondez y caderas más anchas.</p>
                             <p>-Metabolismo más lento.</p>
-                            <p>-Dieta recomendada: control de calorías, alimentos ricos en fibra y actividad física regular.
+                            <p>-Dieta recomendada: control de calorías, alimentos ricos en fibra y actividad física
+                                regular.
                             </p>
                         </div>
                         <div id="mesomorfo" class="hidden">
@@ -220,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-    
+
             </div>
             <div class="w-[100%] mx-auto">
                 <section id="dietaEctomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
@@ -262,7 +277,7 @@
                         </ul>
                     </div>
                 </section>
-    
+
                 <section id="dietaMesomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
                     <h2 class="text-xl font-semibold mb-4">Dieta Recomendada para Mesomorfos</h2>
                     <button
@@ -301,7 +316,7 @@
                         </ul>
                     </div>
                 </section>
-    
+
                 <section id="dietaEndomorfo" class="bg-blue-200 p-6 rounded shadow-md m-3 hidden">
                     <h2 class="text-xl font-semibold mb-4">Dieta Recomendada para Endomorfos</h2>
                     <button
@@ -341,15 +356,15 @@
                     </div>
                 </section>
             </div>
-    
+
             <div class="w-[100%] mx-auto flex justify-around items-center bg-gray-300 p-1">
                 <button id="closeModalBtn"
-                class="p-3 rounded-md bg-red-700 hover:bg-red-500 text-white text-lg font-medium m-3 flex items-center">Cerrar</button>
-    
+                    class="p-3 rounded-md bg-red-700 hover:bg-red-500 text-white text-lg font-medium m-3 flex items-center">Cerrar</button>
+
                 <button id="Guardar"
-                class="p-3 rounded-md bg-green-700 hover:bg-green-500 text-white text-lg font-medium m-3 flex items-center">Guardar</button>
-            </div>    
-    
+                    class="p-3 rounded-md bg-green-700 hover:bg-green-500 text-white text-lg font-medium m-3 flex items-center">Guardar</button>
+            </div>
+
         </div>
 
         <div id="listaInformes" class="p-2 w-[40%] hidden">
@@ -359,7 +374,7 @@
             </div>
         </div>
     </div>
-    
+
     </div>
 </body>
 

@@ -3,6 +3,7 @@ let ejecucion2 = false;
 
 function CalcularIMC() {
     // Obtener los valores de altura y peso
+    let completadoImc = document.getElementById('imc');
     var Estatura = parseFloat(document.getElementById("Estatura").value);
     var Peso = parseFloat(document.getElementById("Peso").value);
     // Validar que se hayan ingresado valores numéricos positivos
@@ -12,6 +13,7 @@ function CalcularIMC() {
         // Calcular el IMC (Índice de Masa Corporal)
         var IMC = Peso / (Estatura * Estatura);
         ejecucion1 = true;
+        completadoImc.classList.remove('hidden');
     }
 
     // Mostrar el resultado en la etiqueta de texto
@@ -44,6 +46,7 @@ function CalcularIMC() {
 
 //calcular el porcentaje de grasa
 function CalcularPorGrasa() {
+    let completado = document.getElementById('grasa');
     var Edad = parseInt(document.getElementById('Edad').value);
     var sexoOpcion = document.querySelectorAll('input[type="radio"]');
     var OpcionSeleccionada;
@@ -65,6 +68,7 @@ function CalcularPorGrasa() {
                 var Porcentaje = (1.20 * IMC) + (0.23 * Edad) - 5.4;
             }
             ejecucion2 = true;
+            completado.classList.remove('hidden');
         } else {
             alert('Ingrese una edad valida')
         }
@@ -188,6 +192,10 @@ function limpiarDatos(){
     document.getElementById('Estatura').value = '';
     document.getElementById('Peso').value = '';
     document.getElementById('Edad').value = '';
+    let imc = document.getElementById('imc');
+    imc.classList.add('hidden');
+    let grasa = document.getElementById('grasa');
+    grasa.classList.add('hidden');
 }
 
 //secciones de dieta
